@@ -36,14 +36,7 @@ class ByeByeBot(object):
 
 	def __listener(self, msgs):
 
-		if self.id_message_kicked != None:
-
-			self.bot.delete_message(self.chat_id_message_kicked, self.id_message_kicked+1)
-			self.id_message_kicked = None
-
 		for m in msgs:
-
-			print(m)
 
 			# Check if is a new member
 			if m.new_chat_member != None:
